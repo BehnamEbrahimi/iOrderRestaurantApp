@@ -83,8 +83,6 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
         return newImage
     }
     
-    
-    
      // MARK: - Add new entree
     
     @IBAction func addEntreeBtnPressed(_ sender: UIButton) {
@@ -100,6 +98,10 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
             let dishImageData:NSData = dishImage.image!.pngData()! as NSData
         
             newEntree.image = dishImageData as Data
+        }
+        
+        if (dishToEdit != nil)  {
+            self.context.delete(dishToEdit!)
         }
         
         self.saveEntrees()

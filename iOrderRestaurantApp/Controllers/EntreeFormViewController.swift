@@ -78,7 +78,12 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
         
         newEntree.name = self.nameField.text!
         newEntree.type = "entree"
-        newEntree.unitPrice = (self.priceField.text as! NSString).floatValue
+        newEntree.unitPrice = (self.priceField.text! as NSString).floatValue
+        newEntree.desc = self.descField.text
+        
+        let dishImageData:NSData = dishImage.image!.pngData()! as NSData
+        
+        newEntree.image = dishImageData as Data
         
         self.saveEntrees()
     }

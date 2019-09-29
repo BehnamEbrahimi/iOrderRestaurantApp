@@ -29,11 +29,17 @@ class EntreesListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EntreeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EntreeCell", for: indexPath) as! EntreeCellTableViewCell
         
         let entree = entreeArray[indexPath.row]
         
-        cell.textLabel?.text = entree.type
+        cell.nameLable.text = entree.name
+        cell.priceLable.text = "\(entree.unitPrice)"
+        cell.descLable.text = entree.desc
+        
+        if entree.image != nil {
+            cell.dishImageView.image =  UIImage(data: entree.image!)
+        }
         
         return cell
     }

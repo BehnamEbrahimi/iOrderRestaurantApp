@@ -10,7 +10,7 @@
         <!--Orders-->
         <scene sceneID="YZ5-ew-TMY">
             <objects>
-                <tableViewController id="3hb-Ef-dKa" customClass="OrdersViewController" customModule="iOrder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3hb-Ef-dKa" customClass="OrdersViewController" customModule="iOrderRestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rFq-I3-sMt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
         <!--Taking Order-->
         <scene sceneID="yj2-6h-FVw">
             <objects>
-                <viewController id="gaX-3o-Nm5" customClass="OrderViewController" customModule="iOrder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gaX-3o-Nm5" customClass="OrderViewController" customModule="iOrderRestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Svb-FN-tIb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,13 +200,13 @@
         <!--Entrees-->
         <scene sceneID="bgX-sG-xvS">
             <objects>
-                <tableViewController id="mAh-nP-shH" sceneMemberID="viewController">
+                <tableViewController id="mAh-nP-shH" customClass="EntreesListTableViewController" customModule="iOrderRestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HPe-HP-fdy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1JN-Ph-B9h">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntreeCell" id="1JN-Ph-B9h">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1JN-Ph-B9h" id="SZt-Xu-uhN">
@@ -223,7 +223,7 @@
                     <navigationItem key="navigationItem" title="Entrees" id="bae-uK-6xb">
                         <barButtonItem key="rightBarButtonItem" title="New Entree" id="YDL-7g-hjU">
                             <connections>
-                                <segue destination="H21-An-fPt" kind="show" id="Lq9-MD-MsE"/>
+                                <action selector="addEntreeButtonPressed:" destination="mAh-nP-shH" id="oNR-w5-rpI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -231,22 +231,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqH-u8-pW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3433" y="-495"/>
-        </scene>
-        <!--Entree Form-->
-        <scene sceneID="v4v-zm-SdX">
-            <objects>
-                <viewController id="H21-An-fPt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XeZ-zN-bOZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="OCb-HL-ZtZ"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Entree Form" id="6rJ-Mg-kLM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5tU-W4-DA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4174" y="-496"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iJv-nX-1hv">
@@ -325,32 +309,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Main Courses" id="A5d-3F-4lq">
-                        <barButtonItem key="rightBarButtonItem" title="New Entree" id="JwM-bx-yb2">
-                            <connections>
-                                <segue destination="WKX-UO-o2B" kind="show" id="JWW-xV-lgI"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="New Entree" id="JwM-bx-yb2"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aiy-hf-sNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3433" y="202"/>
-        </scene>
-        <!--Main Course Form-->
-        <scene sceneID="Ohc-0S-3vx">
-            <objects>
-                <viewController id="WKX-UO-o2B" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Yy-Gw-TeY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="zGL-Gf-qHY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Main Course Form" id="SUW-rP-VNx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0fb-yv-3hQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4174" y="200"/>
         </scene>
         <!--Add Desert-->
         <scene sceneID="FQC-2d-sWy">
@@ -411,32 +375,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Deserts" id="0nu-ZP-eR2">
-                        <barButtonItem key="rightBarButtonItem" title="New Entree" id="MEP-3A-Cpd">
-                            <connections>
-                                <segue destination="Ft4-RP-D0v" kind="show" id="EBB-bd-uOg"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="New Entree" id="MEP-3A-Cpd"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggn-gH-gOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3433" y="896"/>
-        </scene>
-        <!--Desert Form-->
-        <scene sceneID="SXS-cY-jpc">
-            <objects>
-                <viewController id="Ft4-RP-D0v" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lQG-1g-KHZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="1Ys-ny-79A"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Desert Form" id="X5W-xf-YAA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Te0-IC-TQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4174" y="894"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

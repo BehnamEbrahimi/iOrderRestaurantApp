@@ -7,26 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85024BC1233F757800C01513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85024BC0233F757800C01513 /* LaunchScreen.storyboard */; };
+		85024BC3233F75DE00C01513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85024BC2233F75DE00C01513 /* SceneDelegate.swift */; };
+		85024BCB233F7ADA00C01513 /* EntreesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */; };
 		85FA8B71233F45F1004E3569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B70233F45F1004E3569 /* AppDelegate.swift */; };
-		85FA8B73233F45F1004E3569 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B72233F45F1004E3569 /* SceneDelegate.swift */; };
 		85FA8B78233F45F1004E3569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA8B76233F45F1004E3569 /* Main.storyboard */; };
 		85FA8B7B233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B79233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld */; };
 		85FA8B7D233F45F3004E3569 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FA8B7C233F45F3004E3569 /* Assets.xcassets */; };
-		85FA8B80233F45F3004E3569 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA8B7E233F45F3004E3569 /* LaunchScreen.storyboard */; };
 		85FA8B88233F46BD004E3569 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B87233F46BD004E3569 /* OrdersViewController.swift */; };
 		85FA8B8A233F4736004E3569 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B89233F4736004E3569 /* OrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85024BC0233F757800C01513 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85024BC2233F75DE00C01513 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntreesListTableViewController.swift; sourceTree = "<group>"; };
 		85FA8B6D233F45F1004E3569 /* iOrderRestaurantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOrderRestaurantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FA8B70233F45F1004E3569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85FA8B72233F45F1004E3569 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		85FA8B77233F45F1004E3569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85FA8B7A233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOrderRestaurantApp.xcdatamodel; sourceTree = "<group>"; };
 		85FA8B7C233F45F3004E3569 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		85FA8B7F233F45F3004E3569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85FA8B81233F45F3004E3569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85FA8B87233F46BD004E3569 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrdersViewController.swift; path = ../OrdersViewController.swift; sourceTree = "<group>"; };
+		85FA8B87233F46BD004E3569 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		85FA8B89233F4736004E3569 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +43,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85024BC4233F760D00C01513 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85024BC0233F757800C01513 /* LaunchScreen.storyboard */,
+				85FA8B76233F45F1004E3569 /* Main.storyboard */,
+				85024BC2233F75DE00C01513 /* SceneDelegate.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85024BC5233F761E00C01513 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85FA8B89233F4736004E3569 /* OrderViewController.swift */,
+				85FA8B87233F46BD004E3569 /* OrdersViewController.swift */,
+				85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85024BC6233F764700C01513 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				85FA8B79233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
 		85FA8B64233F45F1004E3569 = {
 			isa = PBXGroup;
 			children = (
@@ -61,14 +91,11 @@
 			isa = PBXGroup;
 			children = (
 				85FA8B70233F45F1004E3569 /* AppDelegate.swift */,
-				85FA8B89233F4736004E3569 /* OrderViewController.swift */,
-				85FA8B72233F45F1004E3569 /* SceneDelegate.swift */,
-				85FA8B87233F46BD004E3569 /* OrdersViewController.swift */,
-				85FA8B76233F45F1004E3569 /* Main.storyboard */,
-				85FA8B7C233F45F3004E3569 /* Assets.xcassets */,
-				85FA8B7E233F45F3004E3569 /* LaunchScreen.storyboard */,
 				85FA8B81233F45F3004E3569 /* Info.plist */,
-				85FA8B79233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld */,
+				85FA8B7C233F45F3004E3569 /* Assets.xcassets */,
+				85024BC5233F761E00C01513 /* Controllers */,
+				85024BC4233F760D00C01513 /* Views */,
+				85024BC6233F764700C01513 /* Data Model */,
 			);
 			path = iOrderRestaurantApp;
 			sourceTree = "<group>";
@@ -131,7 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85FA8B80233F45F3004E3569 /* LaunchScreen.storyboard in Resources */,
+				85024BC1233F757800C01513 /* LaunchScreen.storyboard in Resources */,
 				85FA8B7D233F45F3004E3569 /* Assets.xcassets in Resources */,
 				85FA8B78233F45F1004E3569 /* Main.storyboard in Resources */,
 			);
@@ -144,10 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85024BC3233F75DE00C01513 /* SceneDelegate.swift in Sources */,
 				85FA8B71233F45F1004E3569 /* AppDelegate.swift in Sources */,
 				85FA8B8A233F4736004E3569 /* OrderViewController.swift in Sources */,
 				85FA8B7B233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld in Sources */,
-				85FA8B73233F45F1004E3569 /* SceneDelegate.swift in Sources */,
+				85024BCB233F7ADA00C01513 /* EntreesListTableViewController.swift in Sources */,
 				85FA8B88233F46BD004E3569 /* OrdersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,14 +189,6 @@
 				85FA8B77233F45F1004E3569 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		85FA8B7E233F45F3004E3569 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85FA8B7F233F45F3004E3569 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

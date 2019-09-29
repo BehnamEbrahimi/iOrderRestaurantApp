@@ -18,6 +18,7 @@
 		85FA8B8A233F4736004E3569 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B89233F4736004E3569 /* OrderViewController.swift */; };
 		85FBA0BF2340351100E8B6D7 /* EntreeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBA0BE2340351100E8B6D7 /* EntreeFormViewController.swift */; };
 		85FBA0C12340554700E8B6D7 /* EntreeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBA0C02340554700E8B6D7 /* EntreeCellTableViewCell.swift */; };
+		85FBA0C523407C1500E8B6D7 /* ConfirmOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBA0C423407C1500E8B6D7 /* ConfirmOrderTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		85FA8B89233F4736004E3569 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		85FBA0BE2340351100E8B6D7 /* EntreeFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntreeFormViewController.swift; sourceTree = "<group>"; };
 		85FBA0C02340554700E8B6D7 /* EntreeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntreeCellTableViewCell.swift; sourceTree = "<group>"; };
+		85FBA0C423407C1500E8B6D7 /* ConfirmOrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		85024BC5233F761E00C01513 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				85FBA0C423407C1500E8B6D7 /* ConfirmOrderTableViewController.swift */,
 				85FA8B89233F4736004E3569 /* OrderViewController.swift */,
 				85FBA0BE2340351100E8B6D7 /* EntreeFormViewController.swift */,
 				85FA8B87233F46BD004E3569 /* OrdersViewController.swift */,
@@ -185,6 +188,7 @@
 				85024BCB233F7ADA00C01513 /* EntreesListTableViewController.swift in Sources */,
 				85FBA0C12340554700E8B6D7 /* EntreeCellTableViewCell.swift in Sources */,
 				85FA8B88233F46BD004E3569 /* OrdersViewController.swift in Sources */,
+				85FBA0C523407C1500E8B6D7 /* ConfirmOrderTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

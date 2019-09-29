@@ -130,7 +130,7 @@
         <!--Confirm Order-->
         <scene sceneID="Odh-JJ-ZE1">
             <objects>
-                <tableViewController id="dQq-1T-zGD" sceneMemberID="viewController">
+                <tableViewController id="dQq-1T-zGD" customClass="ConfirmOrderTableViewController" customModule="iOrderRestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6dp-BW-BiP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,7 +153,7 @@
                     <navigationItem key="navigationItem" title="Confirm Order" id="GeB-R9-LPX">
                         <barButtonItem key="rightBarButtonItem" title="Send" id="C9N-Ni-zxj">
                             <connections>
-                                <segue destination="3hb-Ef-dKa" kind="show" id="cf4-fn-L4b"/>
+                                <action selector="sendBtnPressed:" destination="dQq-1T-zGD" id="iIO-xt-Lud"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -202,7 +202,7 @@
             <objects>
                 <tableViewController id="mAh-nP-shH" customClass="EntreesListTableViewController" customModule="iOrderRestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="HPe-HP-fdy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -289,7 +289,7 @@
             <objects>
                 <viewController id="RZA-5y-WbF" customClass="EntreeFormViewController" customModule="iOrderRestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yKc-eH-h24">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71E-ZN-b9u">
@@ -338,7 +338,6 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="addEntreeBtnPressed:" destination="RZA-5y-WbF" eventType="touchUpInside" id="R93-Zg-1sF"/>
-                                    <segue destination="mAh-nP-shH" kind="show" id="JX8-ad-Yg4"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rK1-dF-cOo">
@@ -359,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6il-xl-2Ak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4344.8000000000002" y="-826.23688155922048"/>
+            <point key="canvasLocation" x="4351" y="-494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iJv-nX-1hv">
@@ -512,9 +511,4 @@
             <point key="canvasLocation" x="3433" y="896"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="QxZ-Qw-YqW"/>
-        <segue reference="JX8-ad-Yg4"/>
-        <segue reference="CgZ-k4-kha"/>
-    </inferredMetricsTieBreakers>
 </document>

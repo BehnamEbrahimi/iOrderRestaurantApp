@@ -81,11 +81,15 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
         newEntree.unitPrice = (self.priceField.text! as NSString).floatValue
         newEntree.desc = self.descField.text
         
-        let dishImageData:NSData = dishImage.image!.pngData()! as NSData
+        if dishImage.image != nil {
+            let dishImageData:NSData = dishImage.image!.pngData()! as NSData
         
-        newEntree.image = dishImageData as Data
+            newEntree.image = dishImageData as Data
+        }
         
         self.saveEntrees()
+        
+        _ = navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Model Manipulation Methods

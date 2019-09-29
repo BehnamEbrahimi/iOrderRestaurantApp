@@ -13,6 +13,14 @@ class EntreesListTableViewController: UITableViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var entreeArray = [Dish]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadEntrees()
+        
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +49,20 @@ class EntreesListTableViewController: UITableViewController {
             cell.dishImageView.image =  UIImage(data: entree.image!)
         }
         
+        cell.delAction = {
+            self.context.delete(self.entreeArray[indexPath.row])
+            
+            self.entreeArray.remove(at: indexPath.row)
+            
+            do {
+                try self.context.save()
+            } catch {
+                print("Error saving context \(error)")
+            }
+            
+            tableView.reloadData()
+            
+        }
         return cell
     }
     

@@ -37,6 +37,39 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
         self.present(imagePicker, animated: true, completion:nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        var selectedImage: UIImage?
+        if let editedImage = info[.editedImage] as? UIImage {
+            selectedImage = editedImage
+            picker.dismiss(animated: true, completion: nil)
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            selectedImage = originalImage
+        }
+        
+        let smallPicture = scaleImageWith(image: selectedImage!, newSize: CGSize(width: 100,height: 100))
+        
+        var sizeOfImageView:CGRect = dishImage.frame
+        sizeOfImageView.size = smallPicture.size
+        dishImage.frame = sizeOfImageView
+        
+        dishImage.image = smallPicture
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func scaleImageWith(image:UIImage, newSize:CGSize)->UIImage{
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        image.draw(in: CGRect(x: 0,y: 0,width: newSize.width, height: newSize.height))
+        
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsGetImageFromCurrentImageContext()
+        
+        return newImage
+    }
+    
+    
+    
      // MARK: - Add new entree
     
     @IBAction func addEntreeBtnPressed(_ sender: UIButton) {

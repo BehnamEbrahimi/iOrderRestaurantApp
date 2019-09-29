@@ -262,12 +262,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwh-la-WgM">
-                                <rect key="frame" x="135" y="322" width="103" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Add Image"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gA5-du-9zr">
                                 <rect key="frame" x="182" y="108" width="163" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -287,7 +281,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciD-wd-IId">
-                                <rect key="frame" x="135" y="369" width="92" height="48"/>
+                                <rect key="frame" x="30" y="331" width="92" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Submit"/>
@@ -297,7 +291,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rK1-dF-cOo">
-                                <rect key="frame" x="24" y="414" width="315" height="167"/>
+                                <rect key="frame" x="217" y="331" width="128" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -307,13 +301,14 @@
                     <navigationItem key="navigationItem" title="Entree Form" id="Fke-jR-Q3y"/>
                     <connections>
                         <outlet property="descField" destination="WTc-cC-Sbg" id="ZD3-1w-oWZ"/>
+                        <outlet property="dishImage" destination="rK1-dF-cOo" id="MFF-LS-fM7"/>
                         <outlet property="nameField" destination="gA5-du-9zr" id="q1P-lL-0ej"/>
                         <outlet property="priceField" destination="TXK-Zf-fkP" id="1XW-jd-L95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6il-xl-2Ak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4346" y="-826"/>
+            <point key="canvasLocation" x="4344.8000000000002" y="-826.23688155922048"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iJv-nX-1hv">

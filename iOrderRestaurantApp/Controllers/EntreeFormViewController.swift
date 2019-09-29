@@ -9,18 +9,32 @@
 import UIKit
 import CoreData
 
-class EntreeFormViewController: UIViewController {
+class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var descField: UITextField!
+    @IBOutlet weak var dishImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.chooseImage))
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        
+        dishImage.addGestureRecognizer(tapGestureRecognizer)
+        dishImage.isUserInteractionEnabled = true
 
+    }
+    
+    @objc func chooseImage(recognizer:UITapGestureRecognizer){
+        let imagePicker:UIImagePickerController = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        
+        self.present(imagePicker, animated: true, completion:nil)
     }
     
      // MARK: - Add new entree

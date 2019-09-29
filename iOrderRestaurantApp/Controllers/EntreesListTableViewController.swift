@@ -47,6 +47,8 @@ class EntreesListTableViewController: UITableViewController {
         
         if entree.image != nil {
             cell.dishImageView.image =  UIImage(data: entree.image!)
+        } else {
+            cell.dishImageView.image = nil
         }
         
         cell.delAction = {

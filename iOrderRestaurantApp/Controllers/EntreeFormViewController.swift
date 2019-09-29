@@ -26,6 +26,15 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
         if (dishToEdit != nil) && (dishToEdit!.name != nil) {
             nameField.text = dishToEdit?.name
         }
+        if (dishToEdit != nil) && (dishToEdit!.unitPrice != nil) {
+            priceField.text = NSString(format: "%.2f", dishToEdit!.unitPrice) as String
+        }
+        if (dishToEdit != nil) && (dishToEdit!.desc != nil) {
+            descField.text = dishToEdit?.desc
+        }
+        if (dishToEdit != nil) && (dishToEdit!.image != nil) {
+            dishImage.image =  UIImage(data: dishToEdit!.image!)
+        }
 
         let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.chooseImage))
         tapGestureRecognizer.numberOfTouchesRequired = 1

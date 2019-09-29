@@ -37,9 +37,9 @@ class EntreesListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EntreeCell", for: indexPath) as! EntreeCellTableViewCell
-        
         let entree = entreeArray[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EntreeCell", for: indexPath) as! EntreeCellTableViewCell
         
         cell.nameLable.text = entree.name
         cell.priceLable.text = "\(entree.unitPrice)"
@@ -63,7 +63,20 @@ class EntreesListTableViewController: UITableViewController {
             tableView.reloadData()
             
         }
+        
+        cell.edtAction = {
+            let dishToEdit = self.entreeArray[indexPath.row]
+            
+            self.performSegue(withIdentifier: "editEntreeSegue", sender: dishToEdit)
+        }
+        
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let vc = segue.destination as? EntreeFormViewController, let dishToEdit = sender as? Dish {
+        vc.dishToEdit = dishToEdit
+        }
     }
     
     // MARK: - Table view delegate methods

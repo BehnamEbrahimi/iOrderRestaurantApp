@@ -10,6 +10,7 @@ import UIKit
 
 class EntreeCellTableViewCell: UITableViewCell {
     var delAction: (() -> Void)? = nil
+    var edtAction: (() -> Void)? = nil
 
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var priceLable: UILabel!
@@ -31,6 +32,7 @@ class EntreeCellTableViewCell: UITableViewCell {
     }
     
     @IBAction func editBtnPressed(_ sender: UIButton) {
+        edtAction?()
     }
     
 }

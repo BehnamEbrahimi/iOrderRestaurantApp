@@ -11,6 +11,8 @@ import CoreData
 
 class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var dishToEdit: Dish?
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     @IBOutlet weak var nameField: UITextField!
@@ -20,6 +22,10 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (dishToEdit != nil) && (dishToEdit!.name != nil) {
+            nameField.text = dishToEdit?.name
+        }
 
         let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.chooseImage))
         tapGestureRecognizer.numberOfTouchesRequired = 1

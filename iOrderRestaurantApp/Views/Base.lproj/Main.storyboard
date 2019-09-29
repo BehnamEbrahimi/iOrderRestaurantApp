@@ -279,6 +279,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="RZA-5y-WbF" kind="show" identifier="editEntreeSegue" id="UGO-Ki-Yxi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqH-u8-pW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -511,4 +514,7 @@
             <point key="canvasLocation" x="3433" y="896"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="UGO-Ki-Yxi"/>
+    </inferredMetricsTieBreakers>
 </document>

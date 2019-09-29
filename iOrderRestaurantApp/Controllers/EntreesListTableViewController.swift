@@ -33,7 +33,7 @@ class EntreesListTableViewController: UITableViewController {
         
         let entree = entreeArray[indexPath.row]
         
-        cell.textLabel?.text = entree.name
+        cell.textLabel?.text = entree.type
         
         return cell
     }
@@ -44,56 +44,10 @@ class EntreesListTableViewController: UITableViewController {
         
         //entreeArray[indexPath.row].done = !entreeArray[indexPath.row].done
         
-        saveEntrees()
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
-    // MARK: - Add new entree
-    @IBAction func addEntreeButtonPressed(_ sender: UIBarButtonItem) {
         
-        var nameField = UITextField()
-        var priceField = UITextField()
-        
-        let alert = UIAlertController(title: "Add New Entree", message: "", preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "Add Entree", style: .default) { (action) in
-            let newEntree = Dish(context: self.context)
-            newEntree.name = nameField.text!
-            newEntree.type = "entree"
-            newEntree.unitPrice = (priceField.text as! NSString).floatValue
-            
-            self.entreeArray.append(newEntree)
-            
-            self.saveEntrees()
-        }
-        
-        alert.addTextField { (alertNameField) in
-            alertNameField.placeholder = "Name"
-            nameField = alertNameField
-        }
-        
-        alert.addTextField { (alertPriceField) in
-            alertPriceField.placeholder = "Price"
-            priceField = alertPriceField
-        }
-        
-        alert.addAction(action)
-        
-        present(alert, animated: true, completion: nil)
-    }
-    
     // MARK: - Model Manipulation Methods
-    func saveEntrees(){
-        
-        do {
-            try context.save()
-        } catch {
-            print("Error saving context \(error)")
-        }
-        
-        self.tableView.reloadData()
-    }
     
     func loadEntrees(){
         let request : NSFetchRequest<Dish> = Dish.fetchRequest()

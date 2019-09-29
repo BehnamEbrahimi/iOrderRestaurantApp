@@ -16,6 +16,7 @@
 		85FA8B7D233F45F3004E3569 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FA8B7C233F45F3004E3569 /* Assets.xcassets */; };
 		85FA8B88233F46BD004E3569 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B87233F46BD004E3569 /* OrdersViewController.swift */; };
 		85FA8B8A233F4736004E3569 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B89233F4736004E3569 /* OrderViewController.swift */; };
+		85FBA0BF2340351100E8B6D7 /* EntreeFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBA0BE2340351100E8B6D7 /* EntreeFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		85FA8B81233F45F3004E3569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85FA8B87233F46BD004E3569 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		85FA8B89233F4736004E3569 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		85FBA0BE2340351100E8B6D7 /* EntreeFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntreeFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				85FA8B89233F4736004E3569 /* OrderViewController.swift */,
+				85FBA0BE2340351100E8B6D7 /* EntreeFormViewController.swift */,
 				85FA8B87233F46BD004E3569 /* OrdersViewController.swift */,
 				85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */,
 			);
@@ -173,6 +176,7 @@
 			files = (
 				85024BC3233F75DE00C01513 /* SceneDelegate.swift in Sources */,
 				85FA8B71233F45F1004E3569 /* AppDelegate.swift in Sources */,
+				85FBA0BF2340351100E8B6D7 /* EntreeFormViewController.swift in Sources */,
 				85FA8B8A233F4736004E3569 /* OrderViewController.swift in Sources */,
 				85FA8B7B233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld in Sources */,
 				85024BCB233F7ADA00C01513 /* EntreesListTableViewController.swift in Sources */,

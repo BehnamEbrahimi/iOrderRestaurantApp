@@ -50,6 +50,7 @@ class EnreesMenuTableViewController: UITableViewController {
         cell.priceLable.text = "\(entree.dish.unitPrice)"
         cell.descLable.text = entree.dish.desc
         cell.amountLable.text = "\(entree.amount)"
+        cell.stepper.value = Double(entree.amount)
         
         if entree.dish.image != nil {
             cell.dishImageView.image =  UIImage(data: entree.dish.image!)

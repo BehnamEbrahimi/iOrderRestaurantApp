@@ -10,7 +10,7 @@ import UIKit
 
 class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    var pickedEntrees: String?
+    var pickedEntrees = [(dish: String, price: Float, amount: Int)]()
     
     @IBOutlet weak var tableNo: UIPickerView!
     @IBOutlet weak var staffName: UIPickerView!

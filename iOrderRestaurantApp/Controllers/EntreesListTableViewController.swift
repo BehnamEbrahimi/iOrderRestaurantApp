@@ -85,8 +85,6 @@ class EntreesListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //entreeArray[indexPath.row].done = !entreeArray[indexPath.row].done
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
         
@@ -95,7 +93,16 @@ class EntreesListTableViewController: UITableViewController {
     func loadEntrees(){
         let request : NSFetchRequest<Dish> = Dish.fetchRequest()
         do {
-            entreeArray = try context.fetch(request)
+            entreeArray = []
+            
+            var temp = [Dish]()
+            temp = try context.fetch(request)
+            
+            for dish in temp {
+                if dish.type == "entree" {
+                    entreeArray.append(dish)
+                }
+            }
         } catch {
             print("Error fetching data from context \(error)")
         }

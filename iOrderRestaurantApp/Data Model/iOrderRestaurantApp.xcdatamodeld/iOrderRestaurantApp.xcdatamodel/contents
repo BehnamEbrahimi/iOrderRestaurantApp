@@ -6,24 +6,8 @@
         <attribute name="name" attributeType="String"/>
         <attribute name="type" attributeType="String"/>
         <attribute name="unitPrice" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="dish" inverseEntity="Item"/>
-    </entity>
-    <entity name="Item" representedClassName=".Item" syncable="YES" codeGenerationType="class">
-        <attribute name="amount" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="dishTotalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="dish" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dish" inverseName="item" inverseEntity="Dish"/>
-        <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="item" inverseEntity="Order"/>
-    </entity>
-    <entity name="Order" representedClassName=".Order" syncable="YES" codeGenerationType="class">
-        <attribute name="orderNo" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="staffName" attributeType="String"/>
-        <attribute name="tableNo" attributeType="String"/>
-        <attribute name="totalPrice" optional="YES" attributeType="Float" usesScalarValueType="YES"/>
-        <relationship name="item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="order" inverseEntity="Item"/>
     </entity>
     <elements>
-        <element name="Dish" positionX="133" positionY="-81" width="128" height="133"/>
-        <element name="Item" positionX="27" positionY="117" width="128" height="103"/>
-        <element name="Order" positionX="-72" positionY="-77" width="128" height="118"/>
+        <element name="Dish" positionX="133" positionY="-81" width="128" height="118"/>
     </elements>
 </model>

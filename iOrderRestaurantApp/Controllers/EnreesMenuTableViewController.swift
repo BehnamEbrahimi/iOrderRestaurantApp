@@ -83,7 +83,15 @@ class EnreesMenuTableViewController: UITableViewController {
             
             for dish in temp {
                 if dish.type == "entree" {
-                    entreeArray.append((dish, 0))
+                    var matchAmount = 0
+                    
+                    for entree in alreadyPickedEntrees {
+                        if entree.dish == dish.name {
+                            matchAmount = entree.amount
+                        }
+                    }
+                    
+                    entreeArray.append((dish, matchAmount))
                 }
             }
         } catch {

@@ -79,7 +79,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Entree"/>
                                 <connections>
-                                    <segue destination="Y8H-kf-yKN" kind="show" id="tvg-BN-dEa"/>
+                                    <action selector="entreeBtnPressed:" destination="gaX-3o-Nm5" eventType="touchUpInside" id="hNe-Si-Z2o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-4W-tjc">
@@ -114,13 +114,14 @@
                     <navigationItem key="navigationItem" title="Taking Order" id="87t-6M-x3k">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="w48-DX-9dk">
                             <connections>
-                                <segue destination="dQq-1T-zGD" kind="show" id="Ht4-4m-0vt"/>
+                                <segue destination="dQq-1T-zGD" kind="show" identifier="" id="Ht4-4m-0vt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="staffName" destination="ftx-IB-9ft" id="aBQ-DH-cnt"/>
                         <outlet property="tableNo" destination="Mhx-WT-ywa" id="GJ8-oA-Hnr"/>
+                        <segue destination="Y8H-kf-yKN" kind="show" identifier="pickOrEditEntrees" id="BMN-Cl-lPh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mx4-ft-Jy9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -567,7 +568,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tvg-BN-dEa"/>
         <segue reference="UGO-Ki-Yxi"/>
         <segue reference="EUJ-wk-ati"/>
     </inferredMetricsTieBreakers>

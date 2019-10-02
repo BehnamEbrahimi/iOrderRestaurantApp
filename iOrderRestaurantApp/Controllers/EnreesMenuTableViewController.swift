@@ -13,6 +13,7 @@ class EnreesMenuTableViewController: UITableViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var entreeArray = [(dish: Dish, amount: Int)]()
+    var alreadyPickedEntrees = [(dish: String, amount: Int)]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +30,7 @@ class EnreesMenuTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = newBackButton
         
         loadEntrees()
+        print(alreadyPickedEntrees)
     }
 
     // MARK: - Table view data source

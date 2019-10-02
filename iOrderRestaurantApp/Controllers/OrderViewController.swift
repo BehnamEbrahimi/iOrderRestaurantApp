@@ -44,6 +44,22 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         print(row)
     }
     
+    @IBAction func entreeBtnPressed(_ sender: UIButton) {
+        var alreadyPickedEntrees = [(dish: String, amount: Int)]()
+        
+        for entree in pickedEntrees {
+            alreadyPickedEntrees.append((entree.dish, entree.amount ))
+        }
+        
+        performSegue(withIdentifier: "pickOrEditEntrees", sender: alreadyPickedEntrees)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let vc = segue.destination as? EnreesMenuTableViewController, let alreadyPickedEntrees = sender {
+        vc.alreadyPickedEntrees = alreadyPickedEntrees as! [(dish: String, amount: Int)]
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

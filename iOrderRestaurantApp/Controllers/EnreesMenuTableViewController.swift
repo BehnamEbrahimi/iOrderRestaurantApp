@@ -9,11 +9,22 @@
 import UIKit
 import CoreData
 
-class EnreesMenuTableViewController: UITableViewController {
+protocol EntreeProtocol {
+    func setPickedEntrees(valueSent: [(dish: String, price: Float, amount: Int)])
+}
+
+class EnreesMenuTableViewController: UITableViewController  {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var entreeArray = [(dish: Dish, amount: Int)]()
     var alreadyPickedEntrees = [(dish: String, amount: Int)]()
+    var delegate:EntreeProtocol?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadEntrees()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -22,18 +33,20 @@ class EnreesMenuTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "<Taking Order", style: UIBarButtonItem.Style.plain, target: self, action: #selector(EnreesMenuTableViewController.back(sender:)))
-        self.navigationItem.leftBarButtonItem = newBackButton
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         
-        loadEntrees()
-        print(alreadyPickedEntrees)
+        var pickedEntrees = [(dish: String, price: Float, amount: Int)]()
+        
+        for entree in entreeArray {
+            if entree.amount > 0 {
+                pickedEntrees.append((entree.dish.name!, entree.dish.unitPrice * Float(entree.amount), entree.amount ))
+            }
+        }
+        
+        delegate?.setPickedEntrees(valueSent: pickedEntrees)
     }
-
-    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -42,7 +55,7 @@ class EnreesMenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var entree = entreeArray[indexPath.row]
+        let entree = entreeArray[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "EntreeMenuCell", for: indexPath) as! EntreeMenuCellTableViewCell
         
@@ -66,14 +79,10 @@ class EnreesMenuTableViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - Table view delegate methods
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-        
-    // MARK: - Model Manipulation Methods
-    
+           
     func loadEntrees(){
         let request : NSFetchRequest<Dish> = Dish.fetchRequest()
         do {
@@ -99,25 +108,4 @@ class EnreesMenuTableViewController: UITableViewController {
             print("Error fetching data from context \(error)")
         }
     }
-    
-    @objc func back(sender: UIBarButtonItem) {
-        var pickedEntrees = [(dish: String, price: Float, amount: Int)]()
-        
-        for entree in entreeArray {
-            if entree.amount > 0 {
-                pickedEntrees.append((entree.dish.name!, entree.dish.unitPrice * Float(entree.amount), entree.amount ))
-            }
-        }
-        
-        performSegue(withIdentifier: "addEntreesToOrder", sender: pickedEntrees)
-
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let vc = segue.destination as? OrderViewController, let pickedEntrees = sender {
-        vc.pickedEntrees = pickedEntrees as! [(dish: String, price: Float, amount: Int)]
-        }
-    }
-
-
 }

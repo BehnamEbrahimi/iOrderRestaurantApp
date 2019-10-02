@@ -9,12 +9,12 @@
 import UIKit
 
 class ConfirmOrderTableViewController: UITableViewController {
+    var orders:Any!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(orders!)
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 0
@@ -25,6 +25,5 @@ class ConfirmOrderTableViewController: UITableViewController {
     }
     @IBAction func sendBtnPressed(_ sender: Any) {
         _ = navigationController?.popToRootViewController(animated: true)
-        
     }
 }

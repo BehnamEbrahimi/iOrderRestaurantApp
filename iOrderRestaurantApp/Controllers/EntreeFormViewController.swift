@@ -12,7 +12,6 @@ import CoreData
 class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var dishToEdit: Dish?
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     @IBOutlet weak var nameField: UITextField!
@@ -83,8 +82,6 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
         return newImage
     }
     
-     // MARK: - Add new entree
-    
     @IBAction func addEntreeBtnPressed(_ sender: UIButton) {
         
         let newEntree = Dish(context: self.context)
@@ -109,7 +106,6 @@ class EntreeFormViewController: UIViewController, UIImagePickerControllerDelegat
         _ = navigationController?.popViewController(animated: true)
     }
     
-    // MARK: - Model Manipulation Methods
     func saveEntrees(){
         
         do {

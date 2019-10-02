@@ -20,16 +20,13 @@ class EntreeMenuCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     @IBAction func stepperChanged(_ sender: UIStepper) {
         changeAmount?()
     }
-
 }

@@ -14,6 +14,12 @@ class EntreesListTableViewController: UITableViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var entreeArray = [Dish]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadEntrees()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -21,14 +27,6 @@ class EntreesListTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        loadEntrees()
-    }
-
-    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -81,14 +79,10 @@ class EntreesListTableViewController: UITableViewController {
         }
     }
     
-    // MARK: - Table view delegate methods
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
-        
-    // MARK: - Model Manipulation Methods
     
     func loadEntrees(){
         let request : NSFetchRequest<Dish> = Dish.fetchRequest()
@@ -107,5 +101,4 @@ class EntreesListTableViewController: UITableViewController {
             print("Error fetching data from context \(error)")
         }
     }
-    
 }

@@ -19,12 +19,10 @@ class EntreeCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     @IBAction func delBtnPressed(_ sender: UIButton) {
@@ -34,5 +32,4 @@ class EntreeCellTableViewCell: UITableViewCell {
     @IBAction func editBtnPressed(_ sender: UIButton) {
         edtAction?()
     }
-    
 }

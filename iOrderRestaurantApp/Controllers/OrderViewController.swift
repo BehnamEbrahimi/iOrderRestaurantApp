@@ -8,15 +8,20 @@
 
 import UIKit
 
-class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, EntreeProtocol {
     
     var pickedEntrees = [(dish: String, price: Float, amount: Int)]()
+    
+    func setPickedEntrees(valueSent: [(dish: String, price: Float, amount: Int)]) {
+        self.pickedEntrees = valueSent
+    }
     
     @IBOutlet weak var tableNo: UIPickerView!
     @IBOutlet weak var staffName: UIPickerView!
     
     let tableNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
     let staffNames = ["Ben", "Sarah", "Chloe"];
+    var orderSummary = ["Table": "1", "Wait": "Ben", "Created at":"", "Total":""]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -41,7 +46,11 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
+        if pickerView == staffName {
+            orderSummary.updateValue(staffNames[row], forKey: "Wait")
+        } else {
+            orderSummary.updateValue(tableNumbers[row], forKey: "Table")
+        }
     }
     
     @IBAction func entreeBtnPressed(_ sender: UIButton) {
@@ -51,19 +60,41 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             alreadyPickedEntrees.append((entree.dish, entree.amount ))
         }
         
-        performSegue(withIdentifier: "pickOrEditEntrees", sender: alreadyPickedEntrees)
+        let enreesMenuTableViewController = self.storyboard?.instantiateViewController(withIdentifier: "EnreesMenuTableViewController") as! EnreesMenuTableViewController
+        
+        enreesMenuTableViewController.delegate = self
+        
+        enreesMenuTableViewController.alreadyPickedEntrees = alreadyPickedEntrees
+        
+        self.navigationController?.pushViewController(enreesMenuTableViewController, animated: true)
+    }
+    
+    @IBAction func nextBtnPressed(_ sender: UIBarButtonItem) {
+        var allOrders = [(dish: String, price: Float, amount: Int)]()
+        
+        allOrders = pickedEntrees
+        
+        var sum = 0.0;
+        for order in allOrders {
+            sum = sum + Double(order.price)
+        }
+        
+        orderSummary.updateValue("\(sum)", forKey: "Total")
+        orderSummary.updateValue("\(Date())", forKey: "Created at")
+        
+        let bundled = [orderSummary, allOrders] as [Any]
+
+        performSegue(withIdentifier: "confirmOrder", sender: bundled)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let vc = segue.destination as? EnreesMenuTableViewController, let alreadyPickedEntrees = sender {
-        vc.alreadyPickedEntrees = alreadyPickedEntrees as! [(dish: String, amount: Int)]
+        if let vc = segue.destination as? ConfirmOrderTableViewController, let bundled = sender {
+            vc.orders = bundled
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(pickedEntrees)
     }
 
 }

@@ -10,6 +10,8 @@
 		85024BC1233F757800C01513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85024BC0233F757800C01513 /* LaunchScreen.storyboard */; };
 		85024BC3233F75DE00C01513 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85024BC2233F75DE00C01513 /* SceneDelegate.swift */; };
 		85024BCB233F7ADA00C01513 /* EntreesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */; };
+		85D731682344429200A46431 /* EnreesMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D731672344429200A46431 /* EnreesMenuTableViewController.swift */; };
+		85D7316A234442D300A46431 /* EntreeMenuCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D73169234442D300A46431 /* EntreeMenuCellTableViewCell.swift */; };
 		85FA8B71233F45F1004E3569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B70233F45F1004E3569 /* AppDelegate.swift */; };
 		85FA8B78233F45F1004E3569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA8B76233F45F1004E3569 /* Main.storyboard */; };
 		85FA8B7B233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B79233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld */; };
@@ -25,6 +27,8 @@
 		85024BC0233F757800C01513 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85024BC2233F75DE00C01513 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntreesListTableViewController.swift; sourceTree = "<group>"; };
+		85D731672344429200A46431 /* EnreesMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnreesMenuTableViewController.swift; sourceTree = "<group>"; };
+		85D73169234442D300A46431 /* EntreeMenuCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntreeMenuCellTableViewCell.swift; sourceTree = "<group>"; };
 		85FA8B6D233F45F1004E3569 /* iOrderRestaurantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOrderRestaurantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FA8B70233F45F1004E3569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85FA8B77233F45F1004E3569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,12 +66,14 @@
 		85024BC5233F761E00C01513 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				85FBA0C423407C1500E8B6D7 /* ConfirmOrderTableViewController.swift */,
-				85FA8B89233F4736004E3569 /* OrderViewController.swift */,
 				85FA8B87233F46BD004E3569 /* OrdersViewController.swift */,
+				85FA8B89233F4736004E3569 /* OrderViewController.swift */,
+				85D731672344429200A46431 /* EnreesMenuTableViewController.swift */,
+				85D73169234442D300A46431 /* EntreeMenuCellTableViewCell.swift */,
 				85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */,
 				85FBA0C02340554700E8B6D7 /* EntreeCellTableViewCell.swift */,
 				85FBA0BE2340351100E8B6D7 /* EntreeFormViewController.swift */,
+				85FBA0C423407C1500E8B6D7 /* ConfirmOrderTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,11 +188,13 @@
 			files = (
 				85024BC3233F75DE00C01513 /* SceneDelegate.swift in Sources */,
 				85FA8B71233F45F1004E3569 /* AppDelegate.swift in Sources */,
+				85D731682344429200A46431 /* EnreesMenuTableViewController.swift in Sources */,
 				85FBA0BF2340351100E8B6D7 /* EntreeFormViewController.swift in Sources */,
 				85FBA0C623408B5800E8B6D7 /* EntreeCellTableViewCell.swift in Sources */,
 				85FA8B8A233F4736004E3569 /* OrderViewController.swift in Sources */,
 				85FA8B7B233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld in Sources */,
 				85024BCB233F7ADA00C01513 /* EntreesListTableViewController.swift in Sources */,
+				85D7316A234442D300A46431 /* EntreeMenuCellTableViewCell.swift in Sources */,
 				85FA8B88233F46BD004E3569 /* OrdersViewController.swift in Sources */,
 				85FBA0C523407C1500E8B6D7 /* ConfirmOrderTableViewController.swift in Sources */,
 			);

@@ -10,6 +10,8 @@ import UIKit
 
 class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var pickedEntrees: String?
+    
     @IBOutlet weak var tableNo: UIPickerView!
     @IBOutlet weak var staffName: UIPickerView!
     
@@ -38,9 +40,14 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {}
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(row)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(pickedEntrees)
     }
+
 }

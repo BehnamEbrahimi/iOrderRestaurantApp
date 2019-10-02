@@ -15,10 +15,10 @@
         <relationship name="order" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Order" inverseName="item" inverseEntity="Order"/>
     </entity>
     <entity name="Order" representedClassName=".Order" syncable="YES" codeGenerationType="class">
-        <attribute name="orderNo" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="orderNo" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="staffName" attributeType="String"/>
-        <attribute name="tableNo" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="totalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tableNo" attributeType="String"/>
+        <attribute name="totalPrice" optional="YES" attributeType="Float" usesScalarValueType="YES"/>
         <relationship name="item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="order" inverseEntity="Item"/>
     </entity>
     <elements>

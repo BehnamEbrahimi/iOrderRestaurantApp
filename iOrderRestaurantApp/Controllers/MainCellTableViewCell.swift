@@ -9,6 +9,8 @@
 import UIKit
 
 class MainCellTableViewCell: UITableViewCell {
+    var delAction: (() -> Void)? = nil
+    var edtAction: (() -> Void)? = nil
 
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var priceLable: UILabel!
@@ -24,9 +26,11 @@ class MainCellTableViewCell: UITableViewCell {
 
     }
     @IBAction func delBtnPressed(_ sender: UIButton) {
+        delAction?()
     }
     
     @IBAction func editBtnPressed(_ sender: UIButton) {
+        edtAction?()
     }
     
 }

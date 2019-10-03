@@ -9,6 +9,7 @@
 import UIKit
 
 class DesertMenuCellTableViewCell: UITableViewCell {
+    var changeAmount: (() -> Void)? = nil
 
     @IBOutlet weak var nameLable: UILabel!
     @IBOutlet weak var priceLable: UILabel!
@@ -27,6 +28,7 @@ class DesertMenuCellTableViewCell: UITableViewCell {
     }
     
     @IBAction func stepperChanged(_ sender: UIStepper) {
+        changeAmount?()
     }
     
 

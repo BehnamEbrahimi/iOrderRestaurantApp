@@ -8,12 +8,22 @@
 
 import UIKit
 
-class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, EntreeProtocol {
+class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, EntreeProtocol, MainProtocol, DesertProtocol {
     
     var pickedEntrees = [(dish: String, price: Float, amount: Int)]()
+    var pickedMains = [(dish: String, price: Float, amount: Int)]()
+    var pickedDeserts = [(dish: String, price: Float, amount: Int)]()
     
     func setPickedEntrees(valueSent: [(dish: String, price: Float, amount: Int)]) {
         self.pickedEntrees = valueSent
+    }
+    
+    func setPickedMains(valueSent: [(dish: String, price: Float, amount: Int)]) {
+        self.pickedMains = valueSent
+    }
+    
+    func setPickedDeserts(valueSent: [(dish: String, price: Float, amount: Int)]) {
+        self.pickedDeserts = valueSent
     }
     
     @IBOutlet weak var tableNo: UIPickerView!
@@ -69,10 +79,44 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         self.navigationController?.pushViewController(enreesMenuTableViewController, animated: true)
     }
     
+    
+    @IBAction func mainBtnPressed(_ sender: UIButton) {
+        var alreadyPickedMains = [(dish: String, amount: Int)]()
+        
+        for main in pickedMains {
+            alreadyPickedMains.append((main.dish, main.amount ))
+        }
+        
+        let mainsMenuTableViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainsMenuTableViewController") as! MainsMenuTableViewController
+        
+        mainsMenuTableViewController.delegate = self
+        
+        mainsMenuTableViewController.alreadyPickedMains = alreadyPickedMains
+        
+        self.navigationController?.pushViewController(mainsMenuTableViewController, animated: true)
+    }
+    
+    @IBAction func desertBtnPressed(_ sender: UIButton) {
+        var alreadyPickedDeserts = [(dish: String, amount: Int)]()
+        
+        for desert in pickedDeserts {
+            alreadyPickedDeserts.append((desert.dish, desert.amount ))
+        }
+        
+        let desertsMenuTableViewController = self.storyboard?.instantiateViewController(withIdentifier: "DesertsMenuTableViewController") as! DesertsMenuTableViewController
+        
+        desertsMenuTableViewController.delegate = self
+        
+        desertsMenuTableViewController.alreadyPickedDeserts = alreadyPickedDeserts
+        
+        self.navigationController?.pushViewController(desertsMenuTableViewController, animated: true)
+    }
+    
+    
     @IBAction func nextBtnPressed(_ sender: UIBarButtonItem) {
         var allOrders = [(dish: String, price: Float, amount: Int)]()
         
-        allOrders = pickedEntrees
+        allOrders = pickedEntrees + pickedMains + pickedDeserts
         
         var sum = 0.0;
         for order in allOrders {

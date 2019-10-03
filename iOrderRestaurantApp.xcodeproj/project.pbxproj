@@ -12,6 +12,16 @@
 		85024BCB233F7ADA00C01513 /* EntreesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */; };
 		8519754323456D19002C3A74 /* ConfirmOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519754223456D19002C3A74 /* ConfirmOrderTableViewCell.swift */; };
 		8519754523457D5F002C3A74 /* OrdersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8519754423457D5F002C3A74 /* OrdersViewCell.swift */; };
+		859F93F923461687006AD406 /* MainsMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F93F823461687006AD406 /* MainsMenuTableViewController.swift */; };
+		859F93FB234616CD006AD406 /* MainMenuCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F93FA234616CD006AD406 /* MainMenuCellTableViewCell.swift */; };
+		859F93FD234616F6006AD406 /* MainsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F93FC234616F6006AD406 /* MainsListTableViewController.swift */; };
+		859F93FF23461724006AD406 /* MainCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F93FE23461724006AD406 /* MainCellTableViewCell.swift */; };
+		859F940123461749006AD406 /* MainFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F940023461749006AD406 /* MainFormViewController.swift */; };
+		859F940323461771006AD406 /* DesertsMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F940223461771006AD406 /* DesertsMenuTableViewController.swift */; };
+		859F94052346179C006AD406 /* DesertMenuCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F94042346179C006AD406 /* DesertMenuCellTableViewCell.swift */; };
+		859F9407234617C0006AD406 /* DesertsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F9406234617C0006AD406 /* DesertsListTableViewController.swift */; };
+		859F9409234617E7006AD406 /* DesertCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F9408234617E7006AD406 /* DesertCellTableViewCell.swift */; };
+		859F940B23461806006AD406 /* DesertFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859F940A23461805006AD406 /* DesertFormViewController.swift */; };
 		85D731682344429200A46431 /* EnreesMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D731672344429200A46431 /* EnreesMenuTableViewController.swift */; };
 		85D7316A234442D300A46431 /* EntreeMenuCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D73169234442D300A46431 /* EntreeMenuCellTableViewCell.swift */; };
 		85FA8B71233F45F1004E3569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA8B70233F45F1004E3569 /* AppDelegate.swift */; };
@@ -31,6 +41,16 @@
 		85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntreesListTableViewController.swift; sourceTree = "<group>"; };
 		8519754223456D19002C3A74 /* ConfirmOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmOrderTableViewCell.swift; sourceTree = "<group>"; };
 		8519754423457D5F002C3A74 /* OrdersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewCell.swift; sourceTree = "<group>"; };
+		859F93F823461687006AD406 /* MainsMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainsMenuTableViewController.swift; sourceTree = "<group>"; };
+		859F93FA234616CD006AD406 /* MainMenuCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCellTableViewCell.swift; sourceTree = "<group>"; };
+		859F93FC234616F6006AD406 /* MainsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainsListTableViewController.swift; sourceTree = "<group>"; };
+		859F93FE23461724006AD406 /* MainCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellTableViewCell.swift; sourceTree = "<group>"; };
+		859F940023461749006AD406 /* MainFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFormViewController.swift; sourceTree = "<group>"; };
+		859F940223461771006AD406 /* DesertsMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesertsMenuTableViewController.swift; sourceTree = "<group>"; };
+		859F94042346179C006AD406 /* DesertMenuCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesertMenuCellTableViewCell.swift; sourceTree = "<group>"; };
+		859F9406234617C0006AD406 /* DesertsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesertsListTableViewController.swift; sourceTree = "<group>"; };
+		859F9408234617E7006AD406 /* DesertCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesertCellTableViewCell.swift; sourceTree = "<group>"; };
+		859F940A23461805006AD406 /* DesertFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesertFormViewController.swift; sourceTree = "<group>"; };
 		85D731672344429200A46431 /* EnreesMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnreesMenuTableViewController.swift; sourceTree = "<group>"; };
 		85D73169234442D300A46431 /* EntreeMenuCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntreeMenuCellTableViewCell.swift; sourceTree = "<group>"; };
 		85FA8B6D233F45F1004E3569 /* iOrderRestaurantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOrderRestaurantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +98,16 @@
 				85024BCA233F7ADA00C01513 /* EntreesListTableViewController.swift */,
 				85FBA0C02340554700E8B6D7 /* EntreeCellTableViewCell.swift */,
 				85FBA0BE2340351100E8B6D7 /* EntreeFormViewController.swift */,
+				859F93F823461687006AD406 /* MainsMenuTableViewController.swift */,
+				859F93FA234616CD006AD406 /* MainMenuCellTableViewCell.swift */,
+				859F93FC234616F6006AD406 /* MainsListTableViewController.swift */,
+				859F93FE23461724006AD406 /* MainCellTableViewCell.swift */,
+				859F940023461749006AD406 /* MainFormViewController.swift */,
+				859F940223461771006AD406 /* DesertsMenuTableViewController.swift */,
+				859F94042346179C006AD406 /* DesertMenuCellTableViewCell.swift */,
+				859F9406234617C0006AD406 /* DesertsListTableViewController.swift */,
+				859F9408234617E7006AD406 /* DesertCellTableViewCell.swift */,
+				859F940A23461805006AD406 /* DesertFormViewController.swift */,
 				85FBA0C423407C1500E8B6D7 /* ConfirmOrderTableViewController.swift */,
 				8519754223456D19002C3A74 /* ConfirmOrderTableViewCell.swift */,
 			);
@@ -194,17 +224,27 @@
 			files = (
 				85024BC3233F75DE00C01513 /* SceneDelegate.swift in Sources */,
 				8519754523457D5F002C3A74 /* OrdersViewCell.swift in Sources */,
+				859F9409234617E7006AD406 /* DesertCellTableViewCell.swift in Sources */,
+				859F940B23461806006AD406 /* DesertFormViewController.swift in Sources */,
 				85FA8B71233F45F1004E3569 /* AppDelegate.swift in Sources */,
+				859F9407234617C0006AD406 /* DesertsListTableViewController.swift in Sources */,
+				859F940123461749006AD406 /* MainFormViewController.swift in Sources */,
+				859F93F923461687006AD406 /* MainsMenuTableViewController.swift in Sources */,
 				85D731682344429200A46431 /* EnreesMenuTableViewController.swift in Sources */,
 				85FBA0BF2340351100E8B6D7 /* EntreeFormViewController.swift in Sources */,
 				85FBA0C623408B5800E8B6D7 /* EntreeCellTableViewCell.swift in Sources */,
 				85FA8B8A233F4736004E3569 /* OrderViewController.swift in Sources */,
+				859F940323461771006AD406 /* DesertsMenuTableViewController.swift in Sources */,
+				859F93FD234616F6006AD406 /* MainsListTableViewController.swift in Sources */,
 				85FA8B7B233F45F1004E3569 /* iOrderRestaurantApp.xcdatamodeld in Sources */,
 				85024BCB233F7ADA00C01513 /* EntreesListTableViewController.swift in Sources */,
+				859F94052346179C006AD406 /* DesertMenuCellTableViewCell.swift in Sources */,
 				85D7316A234442D300A46431 /* EntreeMenuCellTableViewCell.swift in Sources */,
 				85FA8B88233F46BD004E3569 /* OrdersViewController.swift in Sources */,
+				859F93FF23461724006AD406 /* MainCellTableViewCell.swift in Sources */,
 				85FBA0C523407C1500E8B6D7 /* ConfirmOrderTableViewController.swift in Sources */,
 				8519754323456D19002C3A74 /* ConfirmOrderTableViewCell.swift in Sources */,
+				859F93FB234616CD006AD406 /* MainMenuCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

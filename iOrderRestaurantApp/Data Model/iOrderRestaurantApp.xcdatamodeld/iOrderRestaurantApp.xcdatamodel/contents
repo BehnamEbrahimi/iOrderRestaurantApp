@@ -7,7 +7,14 @@
         <attribute name="type" attributeType="String"/>
         <attribute name="unitPrice" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="OrderSummary" representedClassName=".OrderSummary" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
+        <attribute name="table" optional="YES" attributeType="String"/>
+        <attribute name="wait" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Dish" positionX="133" positionY="-81" width="128" height="118"/>
+        <element name="OrderSummary" positionX="-74" positionY="-65" width="128" height="103"/>
     </elements>
 </model>

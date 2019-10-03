@@ -10,20 +10,53 @@ import UIKit
 import CoreData
 
 class OrdersViewController: UITableViewController {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var orderArray = [OrderSummary]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 0
+        loadOrders()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadOrders()
+        
+        tableView.reloadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
- 
-        return 0
+
+        return orderArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let order = orderArray[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OrdersViewCell", for: indexPath) as! OrdersViewCell
+        
+        cell.dateLabel.text = order.date
+        cell.waitLabel.text = order.wait
+        cell.priceLabel.text = order.price
+        cell.tableLabel.text = order.table
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func loadOrders(){
+        let request : NSFetchRequest<OrderSummary> = OrderSummary.fetchRequest()
+        do {
+            orderArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+        }
     }
 }

@@ -269,13 +269,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0ya-He-sO5">
-                                            <rect key="frame" x="237" y="57" width="94" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="stepperChanged:" destination="9oI-O0-y8r" eventType="valueChanged" id="drP-wZ-Jbu"/>
-                                            </connections>
-                                        </stepper>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KJ-c5-k7X">
                                             <rect key="frame" x="339" y="63" width="11" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -283,6 +276,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="F3W-iv-pIY">
+                                            <rect key="frame" x="237" y="54" width="94" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="stepperChanged:" destination="9oI-O0-y8r" eventType="valueChanged" id="p31-AS-u7R"/>
+                                            </connections>
+                                        </stepper>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -291,7 +291,7 @@
                                     <outlet property="dishImageView" destination="kF6-Yw-Woe" id="F55-xl-wbo"/>
                                     <outlet property="nameLable" destination="85V-tC-fgz" id="eSG-7c-Wn3"/>
                                     <outlet property="priceLable" destination="5Sd-zA-H8H" id="Eyr-Fv-HzW"/>
-                                    <outlet property="stepper" destination="0ya-He-sO5" id="MNQ-hb-kX8"/>
+                                    <outlet property="stepper" destination="F3W-iv-pIY" id="0Xw-q7-VmQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -346,14 +346,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nUn-TP-bbJ">
-                                            <rect key="frame" x="260" y="62" width="94" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="stepperChanged:" destination="9oI-O0-y8r" eventType="valueChanged" id="BOv-zM-DOS"/>
-                                                <action selector="stepperChanged:" destination="mj0-6n-FBG" eventType="valueChanged" id="qEO-ze-V24"/>
-                                            </connections>
-                                        </stepper>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faj-qO-LU1">
                                             <rect key="frame" x="362" y="62" width="11" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -368,6 +360,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Bo5-wp-Ms0">
+                                            <rect key="frame" x="254" y="51" width="94" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="stepperChanged:" destination="mj0-6n-FBG" eventType="valueChanged" id="nLL-ne-nUa"/>
+                                            </connections>
+                                        </stepper>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -376,7 +375,7 @@
                                     <outlet property="dishImageView" destination="iEb-3w-rlh" id="AE2-uu-OCO"/>
                                     <outlet property="nameLable" destination="uNg-3j-Pqe" id="KvS-Cw-zF2"/>
                                     <outlet property="priceLable" destination="Fw2-do-iMv" id="ouz-CN-4US"/>
-                                    <outlet property="stepper" destination="nUn-TP-bbJ" id="8ts-MS-rxF"/>
+                                    <outlet property="stepper" destination="Bo5-wp-Ms0" id="y4E-Vu-gmA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -438,14 +437,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZNF-Zi-iZ0">
-                                            <rect key="frame" x="245" y="68" width="94" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="stepperChanged:" destination="J4c-HO-HfN" eventType="valueChanged" id="ERV-b1-491"/>
-                                                <action selector="stepperChanged:" destination="9oI-O0-y8r" eventType="valueChanged" id="P8w-yj-Om6"/>
-                                            </connections>
-                                        </stepper>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRR-eI-Fcu">
                                             <rect key="frame" x="348" y="59" width="11" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -453,6 +444,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JBj-4w-CkQ">
+                                            <rect key="frame" x="246" y="48" width="94" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="stepperChanged:" destination="J4c-HO-HfN" eventType="valueChanged" id="Jut-9d-x1G"/>
+                                            </connections>
+                                        </stepper>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -461,7 +459,7 @@
                                     <outlet property="dishImageView" destination="aHR-85-zrZ" id="03M-eM-b4n"/>
                                     <outlet property="nameLable" destination="NmQ-hk-S6F" id="Jnp-AD-d4g"/>
                                     <outlet property="priceLable" destination="3jS-Fi-Htx" id="eaG-wI-757"/>
-                                    <outlet property="stepper" destination="ZNF-Zi-iZ0" id="Zot-If-76x"/>
+                                    <outlet property="stepper" destination="JBj-4w-CkQ" id="c7h-VX-4Bb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -498,58 +496,54 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrC-JM-Ltr">
-                                            <rect key="frame" x="16" y="0.0" width="75" height="75"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ice Cream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2W-vB-PCl">
-                                            <rect key="frame" x="124" y="10" width="78" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ice Cream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zch-1p-fhr">
+                                            <rect key="frame" x="111" y="25" width="78" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Milk, Cream , Sugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSo-ij-kVI">
-                                            <rect key="frame" x="113" y="64" width="149" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Milk, Cream, Sugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUN-7y-I5z">
+                                            <rect key="frame" x="97" y="40" width="145" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spo-dd-gja">
-                                            <rect key="frame" x="301" y="17" width="30" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-6K-tRG">
+                                            <rect key="frame" x="250" y="25" width="42" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="X">
-                                                <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="delBtnPressed:" destination="1JN-Ph-B9h" eventType="touchUpInside" id="QIt-10-hj9"/>
-                                                <action selector="delBtnPressed:" destination="IEa-53-6ch" eventType="touchUpInside" id="oj2-bJ-XVg"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7W-Ck-LAb">
-                                            <rect key="frame" x="270" y="59" width="30" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-e7-zoJ">
+                                            <rect key="frame" x="291" y="54" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Edit"/>
                                             <connections>
-                                                <action selector="editBtnPressed:" destination="1JN-Ph-B9h" eventType="touchUpInside" id="jbC-jC-fru"/>
-                                                <action selector="editBtnPressed:" destination="IEa-53-6ch" eventType="touchUpInside" id="s1Y-W1-nSR"/>
+                                                <action selector="editBtnPressed:" destination="IEa-53-6ch" eventType="touchUpInside" id="IyS-mI-6FH"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfm-E4-iTE">
-                                            <rect key="frame" x="230" y="17" width="32" height="21"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oi-7O-q1g">
+                                            <rect key="frame" x="308" y="0.0" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <state key="normal" title="X"/>
+                                            <connections>
+                                                <action selector="delBtnPressed:" destination="IEa-53-6ch" eventType="touchUpInside" id="jK7-9J-zfx"/>
+                                            </connections>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-X2-C8v">
+                                            <rect key="frame" x="0.0" y="9" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descLable" destination="uSo-ij-kVI" id="e8q-HQ-OK5"/>
-                                    <outlet property="dishImageView" destination="qrC-JM-Ltr" id="ACo-4K-b7M"/>
-                                    <outlet property="nameLable" destination="y2W-vB-PCl" id="K50-1r-cjo"/>
-                                    <outlet property="priceLable" destination="lfm-E4-iTE" id="orD-EE-Bib"/>
+                                    <outlet property="descLable" destination="ZUN-7y-I5z" id="2FR-2b-Bhh"/>
+                                    <outlet property="dishImageView" destination="f4e-X2-C8v" id="Bld-xJ-IEA"/>
+                                    <outlet property="nameLable" destination="Zch-1p-fhr" id="1P0-4q-tuW"/>
+                                    <outlet property="priceLable" destination="SMh-6K-tRG" id="WBR-sI-4NU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -566,10 +560,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descLable" destination="uSo-ij-kVI" id="LX3-4V-m42"/>
-                        <outlet property="dishImageView" destination="qrC-JM-Ltr" id="zkt-wb-X8c"/>
-                        <outlet property="nameLable" destination="y2W-vB-PCl" id="04i-p0-ign"/>
-                        <outlet property="priceLable" destination="lfm-E4-iTE" id="YZx-dY-oUM"/>
                         <segue destination="t0H-NU-7M6" kind="show" identifier="editDesertSegue" id="PE0-Ra-C9i"/>
                     </connections>
                 </tableViewController>
@@ -688,26 +678,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U86-am-cBN">
-                                            <rect key="frame" x="306" y="11" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="X">
-                                                <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="delBtnPressed:" destination="1JN-Ph-B9h" eventType="touchUpInside" id="C7D-hJ-59s"/>
-                                                <action selector="delBtnPressed:" destination="NV1-p6-REw" eventType="touchUpInside" id="N85-bc-8e0"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bp-GG-7zl">
-                                            <rect key="frame" x="317" y="59" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Edit"/>
-                                            <connections>
-                                                <action selector="editBtnPressed:" destination="NV1-p6-REw" eventType="touchUpInside" id="L4v-cz-GRG"/>
-                                                <action selector="editBtnPressed:" destination="1JN-Ph-B9h" eventType="touchUpInside" id="j6I-63-ck4"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ice Cream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pef-nK-M3Q">
                                             <rect key="frame" x="140" y="20" width="78" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -715,6 +685,22 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jf-tO-l6R">
+                                            <rect key="frame" x="321" y="54" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Edit"/>
+                                            <connections>
+                                                <action selector="editBtnPressed:" destination="NV1-p6-REw" eventType="touchUpInside" id="DDI-5H-mLl"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eV-zn-drU">
+                                            <rect key="frame" x="321" y="11" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="X"/>
+                                            <connections>
+                                                <action selector="delBtnPressed:" destination="NV1-p6-REw" eventType="touchUpInside" id="UDW-aM-5fl"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -863,22 +849,20 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2k-v2-qcY">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPK-oU-Tr5">
                                             <rect key="frame" x="321" y="11" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="X">
-                                                <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
+                                            <state key="normal" title="X"/>
                                             <connections>
-                                                <action selector="delBtnPressed:" destination="1JN-Ph-B9h" eventType="touchUpInside" id="i7R-eh-9hv"/>
+                                                <action selector="delBtnPressed:" destination="1JN-Ph-B9h" eventType="touchUpInside" id="R4D-oI-Muq"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inR-Hm-vr7">
-                                            <rect key="frame" x="329" y="49" width="30" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-GL-ncQ">
+                                            <rect key="frame" x="313" y="49" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Edit"/>
                                             <connections>
-                                                <action selector="editBtnPressed:" destination="1JN-Ph-B9h" eventType="touchUpInside" id="Yxh-Gz-V4N"/>
+                                                <action selector="editBtnPressed:" destination="1JN-Ph-B9h" eventType="touchUpInside" id="S4H-bg-f8g"/>
                                             </connections>
                                         </button>
                                     </subviews>

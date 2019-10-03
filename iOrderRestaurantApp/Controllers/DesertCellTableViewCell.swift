@@ -22,16 +22,11 @@ class DesertCellTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     @IBAction func delBtnPressed(_ sender: UIButton) {
     }
     
-    @IBAction func editBtnPressed(_ sender: Any) {
+    @IBAction func editBtnPressed(_ sender: UIButton) {
     }
-    
-    
-
 }

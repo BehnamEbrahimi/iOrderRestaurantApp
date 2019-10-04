@@ -623,7 +623,7 @@
                                     <action selector="addEntreeBtnPressed:" destination="RZA-5y-WbF" eventType="touchUpInside" id="VaW-FE-K2k"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8jf-BZ-jr3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="desert" translatesAutoresizingMaskIntoConstraints="NO" id="8jf-BZ-jr3">
                                 <rect key="frame" x="239" y="82" width="128" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -794,7 +794,7 @@
                                     <action selector="addMainBtnPressed:" destination="ha9-Ba-BVp" eventType="touchUpInside" id="9S3-Jj-6hS"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-XW-2ta">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-XW-2ta">
                                 <rect key="frame" x="210" y="372" width="128" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -958,7 +958,7 @@
                                     <action selector="addEntreeBtnPressed:" destination="RZA-5y-WbF" eventType="touchUpInside" id="R93-Zg-1sF"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rK1-dF-cOo">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="entree" translatesAutoresizingMaskIntoConstraints="NO" id="rK1-dF-cOo">
                                 <rect key="frame" x="217" y="331" width="128" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -997,6 +997,11 @@
             <point key="canvasLocation" x="565.60000000000002" y="-519.49025487256381"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="desert" width="100" height="100"/>
+        <image name="entree" width="100" height="100"/>
+        <image name="main" width="100" height="100"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UGO-Ki-Yxi"/>
         <segue reference="B9J-6i-zlE"/>

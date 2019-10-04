@@ -123,8 +123,14 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             sum = sum + Double(order.price)
         }
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss z"
+        let date = dateFormatter.date(from: "\(Date())")
+        dateFormatter.dateFormat = "HH:mm dd/MM/yyyy"
+        let dateToSave =  dateFormatter.string(from: date!)
+        
         orderSummary.updateValue("\(sum)", forKey: "Total")
-        orderSummary.updateValue("\(Date())", forKey: "Created at")
+        orderSummary.updateValue(dateToSave, forKey: "Created at")
         
         let bundled = [orderSummary, allOrders] as [Any]
 

@@ -55,6 +55,7 @@ class OrdersViewController: UITableViewController {
         let request : NSFetchRequest<OrderSummary> = OrderSummary.fetchRequest()
         do {
             orderArray = try context.fetch(request)
+            orderArray = orderArray.reversed()
         } catch {
             print("Error fetching data from context \(error)")
         }

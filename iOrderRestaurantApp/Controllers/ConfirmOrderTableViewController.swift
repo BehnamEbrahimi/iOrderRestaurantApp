@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import MessageUI
 
-class ConfirmOrderTableViewController: UITableViewController {
+class ConfirmOrderTableViewController: UITableViewController, MFMessageComposeViewControllerDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -62,7 +63,23 @@ class ConfirmOrderTableViewController: UITableViewController {
         
         saveOrder()
         
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            controller.body = "\(ordersItem)"
+            controller.recipients = ["0479182363"]
+            controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+        }
+        
         _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     func saveOrder(){

@@ -17,9 +17,12 @@ class MainFormViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var descField: UITextField!
     @IBOutlet weak var dishImage: UIImageView!
+    @IBOutlet weak var addMainBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addMainBtn.layer.cornerRadius = 8
         
         if (dishToEdit != nil) && (dishToEdit!.name != nil) {
             nameField.text = dishToEdit?.name

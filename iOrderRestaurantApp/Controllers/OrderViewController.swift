@@ -28,6 +28,9 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBOutlet weak var tableNo: UIPickerView!
     @IBOutlet weak var staffName: UIPickerView!
+    @IBOutlet weak var addEntreeBtn: UIButton!
+    @IBOutlet weak var addMainBtn: UIButton!
+    @IBOutlet weak var addDesertBtn: UIButton!
     
     let tableNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
     let staffNames = ["Ben", "Sarah", "Chloe"];
@@ -118,9 +121,9 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         allOrders = pickedEntrees + pickedMains + pickedDeserts
         
-        var sum = 0.0;
+        var sum = Float(0.0);
         for order in allOrders {
-            sum = sum + Double(order.price)
+            sum = sum + order.price
         }
         
         let dateFormatter = DateFormatter()
@@ -129,7 +132,7 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         dateFormatter.dateFormat = "HH:mm dd/MM/yyyy"
         let dateToSave =  dateFormatter.string(from: date!)
         
-        orderSummary.updateValue("\(sum)", forKey: "Total")
+        orderSummary.updateValue(String(format: "%.2f", sum), forKey: "Total")
         orderSummary.updateValue(dateToSave, forKey: "Created at")
         
         let bundled = [orderSummary, allOrders] as [Any]
@@ -145,6 +148,9 @@ class OrderViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addEntreeBtn.layer.cornerRadius = 28
+        addMainBtn.layer.cornerRadius = 28
+        addDesertBtn.layer.cornerRadius = 28
     }
-
 }
